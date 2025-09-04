@@ -1,5 +1,5 @@
 {lib, ...}: let
-  inherit (lib.generators) mkLuaInline;
+  inherit (lib.nvim.binds) pushDownDefault;
 in {
   vim = {
     ui = {
@@ -58,6 +58,7 @@ in {
       # };
       # fastaction.enable = true;
     };
+
     maps = {
       command."<S-Enter>" = {
         action = "function() require('noice').redirect(vim.fn.getcmdline()) end";
@@ -92,10 +93,12 @@ in {
         };
       };
     };
+
     keymaps = [
       {
         key = "<c-f>";
         action = "function() if not require('noice.lsp').scroll(4) then return '<c-f>' end end";
+        lua = true;
         silent = true;
         expr = true;
         desc = "Scroll Forward";
@@ -104,11 +107,14 @@ in {
       {
         key = "<c-b>";
         action = "function() if not require('noice.lsp').scroll(-4) then return '<c-b>' end end";
+        lua = true;
         silent = true;
         expr = true;
         desc = "Scroll Backward";
         mode = ["i" "n" "s"];
       }
     ];
+
+    binds.whichKey.register = pushDownDefault {"<leader>u" = "UI";};
   };
 }

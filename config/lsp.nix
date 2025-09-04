@@ -1,4 +1,6 @@
-_: {
+{lib, ...}: let
+  inherit (lib.nvim.binds) pushDownDefault;
+in {
   vim = {
     lsp = {
       enable = true;
@@ -10,6 +12,8 @@ _: {
       otter-nvim.enable = true;
       trouble.enable = true;
     };
+
+    binds.whichKey.register = pushDownDefault {"<leader>l" = "Language";};
   };
 }
 # vim.lsp.enable({
