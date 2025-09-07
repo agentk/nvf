@@ -1,33 +1,33 @@
-_: {
-  vim.languages = {
-    # TODO: Incorporate SchemaStore
-    # {
-    #   'b0o/SchemaStore.nvim',
-    #   lazy = true,
-    #   version = false, -- last release is way too old
-    # },
+{pkgs, ...}: {
+  vim = {
+    languages = {
+      # TODO: Incorporate SchemaStore
+      # {
+      #   'b0o/SchemaStore.nvim',
+      #   lazy = true,
+      #   version = false, -- last release is way too old
+      # },
 
-    enableFormat = true;
-    enableTreesitter = true;
-    enableExtraDiagnostics = true;
+      enableFormat = true;
+      enableTreesitter = true;
+      enableExtraDiagnostics = true;
 
-    nix.enable = true;
-    markdown.enable = true;
-    bash.enable = true;
-    clang.enable = true;
-    lua.enable = true;
-    yaml = {
-      enable = true;
-      extraFiletypes = [".yamllint"];
+      caddyfile.enable = true;
+      dts.enable = true;
+      nix.enable = true;
+      markdown.enable = true;
+      bash.enable = true;
+      clang.enable = true;
+      lua.enable = true;
+      yaml = {
+        enable = true;
+        extraFiletypes = [".yamllint"];
+      };
     };
+
+    # NOTE: Custom language support
   };
 }
-# -- LANGUAGE: caddy
-# return {
-#   {
-#     'isobit/vim-caddyfile',
-#   },
-# }
 # -- LANGUAGE: Lua
 # return {
 #   {
@@ -96,10 +96,4 @@ _: {
 #     },
 #   },
 # }
-# -- LANGUAGE: dts
-# vim.filetype.add({
-#   extension = {
-#     overlay = 'dts',
-#   },
-# })
 
