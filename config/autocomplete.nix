@@ -1,63 +1,63 @@
 {lib, ...}: let
   inherit (lib.generators) mkLuaInline;
 in {
-  vim.autocomplete = {
-    blink-cmp = {
-      enable = true;
+  vim.autocomplete.blink-cmp = {
+    enable = true;
 
-      mappings = {
-        complete = null;
-        confirm = null;
-        next = null;
-        previous = null;
-        close = null;
-        scrollDocsUp = null;
-        scrollDocsDown = null;
-      };
+    mappings = {
+      close = null;
+      complete = null;
+      confirm = null;
+      next = null;
+      previous = null;
+      scrollDocsDown = null;
+      scrollDocsUp = null;
+    };
 
-      setupOpts = {
+    setupOpts = {
+      cmdline = {
+        completion.menu.auto_show = false;
+        enabled = true;
         keymap.preset = "default";
-
-        completion = {
-          ghost_text.enabled = true;
-
-          list.selection = {
-            preselect = false;
-            auto_insert = true;
-          };
-
-          menu = {
-            scrolloff = 1;
-            scrollbar = false;
-            draw.columns =
-              mkLuaInline
-              # lua
-              ''
-                {
-                  { 'kind_icon' },
-                  { 'label', 'label_description', gap = 1 },
-                  { 'kind' },
-                  { 'source_name' },
-                } '';
-          };
-
-          documentation = {
-            auto_show = true;
-            window = {
-              scrollbar = false;
-              winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,EndOfBuffer:BlinkCmpDoc";
-            };
-          };
-        };
-
-        cmdline = {
-          enabled = true;
-          completion.menu.auto_show = false;
-          keymap.preset = "default";
-        };
-
-        signature.enabled = true;
       };
+
+      completion = {
+        documentation = {
+          auto_show = true;
+          window = {
+            scrollbar = false;
+            winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,EndOfBuffer:BlinkCmpDoc";
+          };
+        };
+
+        ghost_text.enabled = true;
+
+        list.selection = {
+          auto_insert = true;
+          preselect = false;
+        };
+
+        menu = {
+          draw.columns =
+            mkLuaInline
+            # lua
+            ''
+              {
+                { 'kind_icon' },
+                { 'label', 'label_description', gap = 1 },
+                { 'kind' },
+                { 'source_name' },
+              } '';
+          scrollbar = false;
+          scrolloff = 1;
+        };
+      };
+
+      keymap.preset = "default";
+
+      signature.enabled = true;
+
+      sources.default = ["lsp" "path" "snippets" "buffer"];
     };
   };
 }

@@ -14,6 +14,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    vim.lazy.plugins.vim-caddyfile.package = pkgs.vimPlugins.vim-caddyfile;
+    vim.startPlugins = [pkgs.vimPlugins.vim-caddyfile];
   };
 }
