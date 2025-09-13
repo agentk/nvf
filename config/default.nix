@@ -19,39 +19,5 @@ in {
         name = "custom-runtime-after"; # name is arbitrary
       })
     ];
-
-    # autopairs.nvim-autopairs.enable = true;
-    # snippets.luasnip.enable = true;
-
-    # notify = {
-    #   nvim-notify.enable = true;
-    # };
-
-    # projects = {
-    #   project-nvim.enable = true;
-    # };
-
-    # terminal = {
-    #   toggleterm = {
-    #     enable = true;
-    #     lazygit.enable = true;
-    #   };
-    # };
-
-    # session = {
-    #   nvim-session-manager.enable = false;
-    # };
-
-    # gestures = {
-    #   gesture-nvim.enable = false;
-    # };
-
-    # comments = {
-    #   comment-nvim.enable = true;
-    # };
-
-    # presence = {
-    #   neocord.enable = false;
-    # };
   };
 }

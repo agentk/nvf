@@ -1,17 +1,27 @@
-{pkgs, ...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: let
+  inherit (lib) mkForce;
+in {
   vim = {
     assistant.copilot = {
       enable = true;
 
       setupOpts = {
-        suggestion.enabled = false;
-        panel.enabled = false;
         filetypes = {
           markdown = true;
           help = false;
         };
+        mappings.panel.refresh = "";
+        panel.enabled = false;
+        suggestion.enabled = false;
       };
     };
+
+    # Override the default keymaps as we are only using copilot to pass suggestions to blink
+    lazy.plugins.copilot-lua.keys = mkForce [];
 
     autocomplete.blink-cmp.setupOpts.sources = {
       default = ["copilot"];

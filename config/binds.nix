@@ -6,7 +6,24 @@ in {
       whichKey = {
         enable = true;
         setupOpts.preset = "helix";
-        register = pushDownDefault {"<leader>t" = "Toggle";};
+        register = pushDownDefault {
+          "<leader>t" = "Toggle";
+          "<leader>m" = "Markdown";
+          # "<leader>o" = "Obsidian";
+          # "<leader>r" = "Rename";
+          # "<leader>w" = "Workspace";
+
+          # Document builtins
+          "gr" = "Replace";
+          "K" = "Display symbol documentation";
+          "gra" = "Code action";
+          "gri" = "List implementations";
+          # "grn" = "Rename all references";
+          # "grr" = "";
+          # "grt" = "";
+          "gO" = "List all document symbols";
+          # "<C-s>" = "Display signature help";
+        };
       };
 
       cheatsheet.enable = true;
@@ -18,21 +35,3 @@ in {
     };
   };
 }
-# -- { '<leader>c', group = 'Code' },
-# -- { '<leader>f', group = 'Find' },
-# -- { '<leader>g', group = 'Git' },
-# -- { '<leader>h', group = 'Git Hunk', mode = { 'n', 'v' } },
-# -- { '<leader>m', group = 'Markdown' },
-# -- { '<leader>o', group = 'Obsidian' },
-# -- { '<leader>r', group = 'Rename' },
-# -- { '<leader>s', group = 'Search' },
-# -- { '<leader>w', group = 'Workspace' },
-#
-# -- LSP builtins
-# -- { 'K', desc = 'Display symbol documentation' },
-# -- { 'gra', desc = 'Code action', icon = '󰁨' },
-# -- { 'gri', desc = 'List implementations', icon = '' },
-# -- { 'grn', desc = 'Rename all references', icon = '' },
-# -- { 'gO', desc = 'List all document symbols', icon = '' },
-# -- { '<C-s>', desc = 'Display signature help', mode = { 'i', 's' } },
-

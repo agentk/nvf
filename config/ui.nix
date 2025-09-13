@@ -15,23 +15,8 @@ in {
             "cmp.entry.get_documentation" = true;
           };
 
-          routes = [
-            {
-              filter = {
-                event = "msg_show";
-                any = [
-                  {find = "%d+L, %d+B";}
-                  {find = "; after #%d+";}
-                  {find = "; before #%d+";}
-                ];
-              };
-              view = "mini";
-            }
-            {
-              filter = {find = "Content is not an image.";};
-              opts.skip = true;
-            }
-          ];
+          messages.enabled = false;
+
           presets = {
             bottom_search = true; # use a classic bottom cmdline for search
             long_message_to_split = true; # long messages will be sent to a split

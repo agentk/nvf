@@ -81,6 +81,13 @@ in {
         expr = true;
         desc = "Prev Search Result";
       })
+
+      # Yank to the system clipboard with Y
+      (mkKeymap ["n" "x"] "Y" "\"+y" {desc = "Yank to system clipboard";})
+
+      # Delete without yanking with <leader>d
+      (mkKeymap ["n" "v"] "<leader>d" "\"_d" {desc = "Delete without yanking";})
+      (mkKeymap ["n" "v"] "<leader>D" "\"_D" {desc = "Delete without yanking";})
     ];
 
     # Highlight when yanking (copying) text
