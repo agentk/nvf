@@ -2,7 +2,7 @@
   inherit (lib.nvim.binds) mkKeymap;
   inherit (lib.generators) mkLuaInline;
 in {
-  config.vim = {
+  vim = {
     keymaps = [
       # Move up an down through wrapped lines
       (mkKeymap ["n" "x"] "j" "v:count == 0 ? 'gj' : 'j'" {
@@ -47,14 +47,6 @@ in {
       # Better indenting
       (mkKeymap "v" "<" "<gv" {desc = "Deindent";})
       (mkKeymap "v" ">" ">gv" {desc = "Indent";})
-
-      # Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
-      # for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
-      # is not what someone will guess without a bit more experience.
-      #
-      # NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
-      # or just use <C-\><C-n> to exit terminal mode
-      (mkKeymap "t" "<Esc><Esc>" "<C-\\><C-n>" {desc = "Exit terminal mode";})
 
       # https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
       (mkKeymap "n" "n" "'Nn'[v:searchforward].'zv'" {

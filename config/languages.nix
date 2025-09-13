@@ -14,26 +14,28 @@ in {
       enableTreesitter = true;
       enableExtraDiagnostics = true;
 
+      bash.enable = true;
       caddyfile.enable = true;
+      clang.enable = true;
+      css.enable = true;
       dts.enable = true;
-      nix.enable = true;
+      html.enable = true;
+      lua = {
+        enable = true;
+        lsp.lazydev.enable = true;
+      };
       markdown = {
         enable = true;
         extensions.render-markdown-nvim = {
           enable = true;
           setupOpts = {
             completions.lsp.enabled = true;
-            file_types = ["markdown" "Avante"];
             latex.enabled = false;
           };
         };
       };
-      bash.enable = true;
-      clang.enable = true;
-      lua = {
-        enable = true;
-        lsp.lazydev.enable = true;
-      };
+      nix.enable = true;
+      ts.enable = true;
       yaml = {
         enable = true;
         extraFiletypes = [".yamllint"];

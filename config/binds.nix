@@ -9,9 +9,6 @@ in {
         register = pushDownDefault {
           "<leader>t" = "Toggle";
           "<leader>m" = "Markdown";
-          # "<leader>o" = "Obsidian";
-          # "<leader>r" = "Rename";
-          # "<leader>w" = "Workspace";
 
           # Document builtins
           "gr" = "Replace";
@@ -22,7 +19,6 @@ in {
           # "grr" = "";
           # "grt" = "";
           "gO" = "List all document symbols";
-          # "<C-s>" = "Display signature help";
         };
       };
 
