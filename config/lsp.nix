@@ -1,4 +1,8 @@
-{lib, ...}: let
+{
+  lib,
+  pkgs,
+  ...
+}: let
   inherit (lib.nvim.binds) pushDownDefault;
 in {
   vim = {
@@ -12,6 +16,10 @@ in {
       otter-nvim.enable = true;
       trouble.enable = true;
     };
+
+    # TODO: SchemaStore still needs LSP integration
+    # See: https://github.com/b0o/SchemaStore.nvim
+    startPlugins = [pkgs.vimPlugins.SchemaStore-nvim];
 
     binds.whichKey.register = pushDownDefault {"<leader>l" = "Language";};
   };

@@ -1,3 +1,3 @@
 _: {
-  vim.notify.nvim-notify.enable = true;
+  # vim.notify.nvim-notify.enable = true;
 }

@@ -4,54 +4,21 @@
 in {
   vim = {
     utility = {
-      sleuth.enable = true;
-
-      preview.markdownPreview.enable = true;
-
       # { -- Detect tabstop and shiftwidth automatically
       #   'tpope/vim-sleuth',
       #   init = function() vim.cmd([[ let g:sleuth_dts_heuristics = 0 ]]) end,
       # },
       # https://github.com/NotAShelf/nvf/blob/main/modules/plugins/utility/sleuth/config.nix
+      sleuth.enable = true;
 
-      # ccc.enable = false;
-      # vim-wakatime.enable = false;
-      # diffview-nvim.enable = true;
-      # yanky-nvim.enable = false;
-      # icon-picker.enable = true;
-      # surround.enable = true;
-      # leetcode-nvim.enable = true;
-      # multicursors.enable = true;
-      # smart-splits.enable = true;
-      # undotree.enable = true;
-      # nvim-biscuits.enable = true;
+      preview.markdownPreview.enable = true;
 
-      # motion = {
-      #   hop.enable = true;
-      #   leap.enable = true;
-      #   precognition.enable = true;
-      # };
+      ccc.enable = false;
+      diffview-nvim.enable = true;
 
-      # images = {
-      #   image-nvim.enable = false;
-      #   img-clip.enable = true;
-      # };
-      # return {
-      #   {
-      #     -- support for image pasting
-      #     'HakonHarnes/img-clip.nvim',
-      #     event = 'VeryLazy',
-      #     opts = {
-      #       default = {
-      #         embed_image_as_base64 = false,
-      #         prompt_for_file_name = false,
-      #         drag_and_drop = {
-      #           insert_mode = true,
-      #         },
-      #       },
-      #     },
-      #   },
-      # }
+      images = {
+        image-nvim.enable = false;
+      };
 
       snacks-nvim = {
         enable = true;
@@ -62,7 +29,7 @@ in {
             indent.char = "┊";
             animate.enabled = false;
           };
-          notifier.enabled = true;
+          # notifier.enabled = true;
           statuscolumn.enabled = true;
           words.enabled = true;
         };

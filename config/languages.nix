@@ -1,15 +1,14 @@
-{lib, ...}: let
+{
+  lib,
+  pkgs,
+  ...
+}: let
   inherit (lib.nvim.binds) mkKeymap;
 in {
   vim = {
-    languages = {
-      # TODO: Incorporate SchemaStore
-      # {
-      #   'b0o/SchemaStore.nvim',
-      #   lazy = true,
-      #   version = false, -- last release is way too old
-      # },
+    startPlugins = [pkgs.vimPlugins.SchemaStore-nvim];
 
+    languages = {
       enableFormat = true;
       enableTreesitter = true;
       enableExtraDiagnostics = true;

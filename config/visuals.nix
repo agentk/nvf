@@ -3,10 +3,10 @@ _: {
     nvim-scrollbar.enable = true;
     nvim-web-devicons.enable = true;
     nvim-cursorline.enable = true;
-    fidget-nvim.enable = true;
+    fidget-nvim = {
+      enable = true;
+      setupOpts.notification.window.border = "none";
+    };
     highlight-undo.enable = true;
-    # indent-blankline.enable = true;
-    # cinnamon-nvim.enable = true;
-    # cellular-automaton.enable = false;
   };
 }

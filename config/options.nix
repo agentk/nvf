@@ -86,15 +86,6 @@ _: {
       # Disable the command line until needed for a cleaner look
       cmdheight = 0;
 
-      # vim.api.nvim_create_autocmd('TermOpen', {
-      #   group = vim.api.nvim_create_augroup('create-term-open', { clear = true }),
-      #   callback = function()
-      #     vim.opt_local.number = false
-      #     vim.opt_local.relativenumber = false
-      #     vim.opt_local.spell = false
-      #   end,
-      # })
-
       winborder = "rounded";
     };
   };

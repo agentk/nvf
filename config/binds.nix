@@ -15,9 +15,6 @@ in {
           "K" = "Display symbol documentation";
           "gra" = "Code action";
           "gri" = "List implementations";
-          # "grn" = "Rename all references";
-          # "grr" = "";
-          # "grt" = "";
           "gO" = "List all document symbols";
         };
       };
