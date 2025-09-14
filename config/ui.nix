@@ -27,17 +27,6 @@ in {
       colorizer.enable = true;
       fastaction.enable = true;
       illuminate.enable = true;
-
-      # smartcolumn = {
-      #   enable = true;
-      #   setupOpts.custom_colorcolumn = {
-      #     # this is a freeform module, it's `buftype = int;` for configuring column position
-      #     nix = "110";
-      #     ruby = "120";
-      #     java = "130";
-      #     go = ["90" "130"];
-      #   };
-      # };
     };
 
     binds.whichKey.register = pushDownDefault {"<leader>u" = "UI";};

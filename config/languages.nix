@@ -1,13 +1,7 @@
-{
-  lib,
-  pkgs,
-  ...
-}: let
+{lib, ...}: let
   inherit (lib.nvim.binds) mkKeymap;
 in {
   vim = {
-    startPlugins = [pkgs.vimPlugins.SchemaStore-nvim];
-
     languages = {
       enableFormat = true;
       enableTreesitter = true;
