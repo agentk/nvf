@@ -12,6 +12,13 @@ _: {
 
     icons.enable = true;
 
+    indentscope = {
+      enable = true;
+      setupOpts = {
+        symbol = "┊";
+      };
+    };
+
     surround = {
       # Add/delete/replace surroundings (brackets, quotes, etc.)
       #
