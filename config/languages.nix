@@ -9,14 +9,18 @@ in {
 
       bash.enable = true;
       caddyfile.enable = true;
-      clang.enable = true;
       css.enable = true;
+      docker.enable = true;
       dts.enable = true;
+      go.enable = true;
       html.enable = true;
+      jq.enable = true;
+      json.enable = true;
       lua = {
         enable = true;
         lsp.lazydev.enable = true;
       };
+      make.enable = true;
       markdown = {
         enable = true;
         extensions.render-markdown-nvim = {
@@ -28,7 +32,13 @@ in {
         };
       };
       nix.enable = true;
-      ts.enable = true;
+      python.enable = true;
+      rust.enable = true;
+      sql.enable = true;
+      toml.enable = true;
+      tsx.enable = true;
+      typescript.enable = true;
+      xml.enable = true;
       yaml = {
         enable = true;
         extraFiletypes = [".yamllint"];

@@ -2,7 +2,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nvf = {
-      url = "github:notashelf/nvf?ref=v0.8";
+      url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     systems.url = "github:nix-systems/default";

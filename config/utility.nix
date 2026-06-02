@@ -14,11 +14,11 @@ in {
       preview.markdownPreview.enable = true;
 
       ccc.enable = false;
-      diffview-nvim.enable = true;
+      # diffview-nvim.enable = true;
 
-      # images = {
-      #   image-nvim.enable = false;
-      # };
+      images = {
+        image-nvim.enable = true;
+      };
 
       snacks-nvim = {
         enable = true;
@@ -29,7 +29,7 @@ in {
             indent.char = "┊";
             animate.enabled = false;
           };
-          notifier.enabled = true;
+          # notifier.enabled = true;
           statuscolumn.enabled = true;
           words.enabled = true;
         };

@@ -12,7 +12,9 @@ in {
       formatOnSave = true;
 
       inlayHints.enable = true;
+      # VS Code–style pictograms for Neovim completion items
       lspkind.enable = true;
+      # Otter.nvim provides lsp features, including code completion, for code embedded in other documents
       otter-nvim.enable = true;
       trouble.enable = true;
     };

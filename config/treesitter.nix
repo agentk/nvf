@@ -1,6 +1,7 @@
 _: {
   vim.treesitter = {
-    fold = true;
+    enable = true;
+    fold = false;
     context.enable = true;
     textobjects.enable = true;
   };

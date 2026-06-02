@@ -87,6 +87,10 @@ _: {
       cmdheight = 0;
 
       winborder = "rounded";
+
+      # Start with all folds open
+      foldlevel = 99;
+      foldlevelstart = 99;
     };
   };
 }
