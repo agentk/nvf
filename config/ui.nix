@@ -5,7 +5,10 @@ in {
     ui = {
       borders.enable = true;
       colorizer.enable = true;
-      fastaction.enable = true;
+      fastaction = {
+        enable = true;
+        setupOpts.register_ui_select = false;
+      };
       illuminate.enable = true;
     };
 

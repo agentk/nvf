@@ -17,6 +17,8 @@ in {
       # Otter.nvim provides lsp features, including code completion, for code embedded in other documents
       otter-nvim.enable = true;
       trouble.enable = true;
+
+      servers.nil.settings.nil.nix.flake.autoArchive = true;
     };
 
     # TODO: SchemaStore still needs LSP integration

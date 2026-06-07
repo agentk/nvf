@@ -16,14 +16,13 @@ in {
       ccc.enable = false;
       # diffview-nvim.enable = true;
 
-      images = {
-        image-nvim.enable = true;
-      };
+      images.image-nvim.enable = false;
 
       snacks-nvim = {
         enable = true;
         setupOpts = {
           bigfile.enabled = true;
+          image.enabled = false;
           indent = {
             enabled = true;
             indent.char = "┊";
